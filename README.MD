@@ -1,6 +1,6 @@
-## DayZCrisis - Arma 2 Compiled Addon Package 
+## DayZCrisis - Arma 2 Addon Package
 ![DayZ Banner Stealthee](http://media.moddb.com/images/groups/1/5/4017/DayZ_Banner.png "DayZ Banner - Stealthee")
-#### This is an archived project - Project as far as I'm aware is no longer operational.
+#### I no longer support any of this material. Work it out yourself if you want to use it. All contributers are credited in the individual files
 
 ### Releases:
 1. Initial Archive Release from personal archive server, contents may be used but please allow credit where due. All content created under the Arma public license Share Alike (APL-SA) https://www.bistudio.com/community/licenses
