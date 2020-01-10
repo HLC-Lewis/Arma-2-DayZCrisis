@@ -1,0 +1,190 @@
+// Modify or remove this if you don't want a load screen
+loadScreen = "images\loadScreen.paa";
+respawn = "SIDE";
+
+OnLoadMission = "Just Another Boring Day by Varanon (v1.0.0)";
+OnLoadIntro = "Just Another Boring Day by Varanon (v1.0.0)";
+
+#include "functions\functions.hpp"
+
+class CfgSounds
+{
+	#include "library\introSoundRsc.hpp"
+};
+
+class RscTitles 
+{
+	#include "library\introDlgRsc.hpp"
+};
+
+#include "library\loadscreen.hpp"
+#include "library\identities.hpp"
+
+//class RscDisplayLoadMission;
+//class myLoadScreen: RscDisplayLoadMission
+//{
+//	onload = " _this call (compile (preprocessfilelinenumbers ""library\loadscreen.sqf""));";
+//};
+
+class Header
+{
+	gameType = Unknown;
+	minPlayers = 1;
+	maxPlayers = 6;
+	playerCountMultipleOf = 1;
+};
+
+class Params
+{
+	class FHQ_Difficulty
+	{
+		title = "Difficulty";
+		values[] = {0, 1, 2};
+		texts[] = {"Easy", "Normal", "Hard"};
+		default = 1;
+	};
+	class FHQ_ViewDistance
+	{
+		title = "View Distance";
+		values[] = {10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100};
+		texts[] = {"1000m", "1500m", "2000m", "2500m", "3000m", "4000m", "5000m", "6000m", "7000m", "8000m", "9000m", "10000m"};
+		default = 25;
+	};
+	class FHQ_FirstAid
+	{
+		title = "BIS First Aid System";
+		values[] = {0,1};
+		texts[] = {"Disabled", "Enabled"};
+		default = 1;
+	};
+};
+
+
+class FHQ_MultiplayerFramework
+{
+	class Options
+	{
+		Options[] = {"fhq_mp_oneevent"};
+	};
+	
+	class JoinEvents
+	{
+		// List of events that should be automatically fired on joining clients.
+		// Events listed here always get the player as parameter, and a boolean indicating
+		// whether it was a join in progress or not.
+		Events[] = {"viewDistance"};
+	};
+	
+	class Events
+	{
+		// On JIP clients, set view distance
+		class viewDistance
+		{
+			code = "if (_this select 1) then {setViewDistance (FHQ_ViewDistance * 100);};";
+		};
+		
+
+		// This event is called on all clients to end the mission,
+		//parameters [end, text, delay]
+		class missionEnd
+		{
+			// Mission end
+			code = "sleep (_this select 2); cutText [_this select 1, 'BLACK OUT']; sleep 2; endMission (_this select 0);";
+		};
+			
+			
+		// Add topics
+		// Example: 
+		// ["AddTopic", [_x, ["speech", "kb\speech.bikb", "", compile preprocessFileLineNumbers "kb\playerChatEvent.sqf"]]] 
+		//		call FHQ_MP_globalEvent;
+		class AddTopic
+		{
+			// Add the topic to the selected person
+			// parameters [person, [name, filename (,fsm name, player handler)]
+			code = "(_this select 0) kbAddTopic (_this select 1);";
+		};
+		
+		
+		// kbTell a sentence, should be called with speaker local
+		// Example:
+		// ["TellTo", leader FHQ_playerGroup, [leader FHQ_playerGroup, [HQ, "speech", "done1"]]]
+		//					 call FHQ_MP_specificEvent;
+		class TellTo
+		{
+			// Paramters: [speaker, [receiver, topic, sentenceId]]
+			code = "(_this select 0) kbTell (_this select 1);";
+		};
+	};
+};
+
+
+#ifdef LOADOUT
+class Weapons
+{
+	class Binocular_Vector				 	{ count = 7; };
+	class Javelin 							{ count = 2; };
+	class M9 								{ count = 7; };
+	class M9SD  							{ count = 7; };
+	class M110_NVG_EP1 						{ count = 1; };
+	class M110_TWS_EP1						{ count = 1; };
+	class M240								{ count = 2; };
+	class m240_scoped_EP1					{ count = 2; };
+	class M249_EP1 							{ count = 2; };
+	class M249_TWS_EP1		 				{ count = 2; };
+	class Mk_48_DES_EP1						{ count = 2; };
+	class M4A1_Aim							{ count = 7; };
+	class M4A1_HWS_GL						{ count = 7; };
+	class M4A3_CCO_EP1 						{ count = 7; };
+	class M4A3_RCO_GL_EP1					{ count = 7; };
+	class SCAR_H_CQC_CCO 					{ count = 7; };
+	class SCAR_H_CQC_CCO_SD				 	{ count = 7; };
+	class SCAR_H_LNG_Sniper 				{ count = 2; };
+	class SCAR_H_LNG_Sniper_SD 				{ count = 2; };
+	class SCAR_H_STD_EGLM_Spect				{ count = 5; };
+	class SCAR_H_STD_TWS_SD 				{ count = 1; };
+	class SCAR_L_CQC 						{ count = 7; };
+	class SCAR_L_CQC_CCO_SD 				{ count = 7; };
+	class SCAR_L_CQC_EGLM_Holo 				{ count = 7; };
+	class SCAR_L_CQC_Holo 					{ count = 7; };
+	class SCAR_L_STD_EGLM_RCO				{ count = 7; };
+	class SCAR_L_STD_EGLM_TWS				{ count = 1; };
+	class SCAR_L_STD_HOLO 					{ count = 7; };
+	class SCAR_L_STD_Mk4CQT 				{ count = 7; };
+	class MAAWS								{ count = 2; };
+	class Stinger							{ count = 2; };
+};
+
+class Magazines
+{
+	class Javelin 							{ count = 6; };
+	class 15Rnd_9x19_M9 					{ count = 60; };
+	class 15Rnd_9x19_M9SD 					{ count = 60; };
+	class 20Rnd_762x51_B_SCAR  				{ count = 120; };
+	class 30Rnd_556x45_Stanag 				{ count = 120; };
+	class 30Rnd_556x45_StanagSD				{ count = 120; };
+	class 1Rnd_HE_M203						{ count = 120; };
+	class FlareWhite_M203					{ count = 120; };
+	class FlareGreen_M203					{ count = 120; };
+	class FlareRed_M203						{ count = 120; };
+	class 1Rnd_Smoke_M203 					{ count = 120; };
+	class 1Rnd_SmokeRed_M203 				{ count = 120; };
+	class 1Rnd_SmokeGreen_M203 				{ count = 120; };
+	class 100Rnd_762x51_M240 				{ count = 120; };
+	class 200Rnd_556x45_M249 				{ count = 120; };
+	class 20Rnd_762x51_SB_SCAR  			{ count = 120; };
+	class PipeBomb 							{ count = 10; };
+	class SmokeShell						{ count = 120; };
+	class SmokeShellGreen					{ count = 120; };
+	class SmokeShellRed						{ count = 120; };
+	class MAAWS_HEAT						{ count = 12; }; 
+	class MAAWS_HEDP						{ count = 12; };
+	class Stinger							{ count = 12; };
+	class Mine								{ count = 12; };
+};
+
+class Backpacks
+{
+	class US_Backpack_EP1 					{ count = 7; };
+	class US_Assault_Pack_Explosives_EP1 	{ count = 7; };
+};
+#endif

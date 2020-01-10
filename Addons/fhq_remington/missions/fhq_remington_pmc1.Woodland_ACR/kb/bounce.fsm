@@ -1,0 +1,56 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, bounce">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"__",8,218,-225.000000,-450.000000,-125.000000,-400.000000,0.000000,"!"};
+item1[] = {"Bounce_off_to__s",1,4346,-100.000000,-450.000000,0.000000,-400.000000,0.000000,"Bounce off to " \n "script"};
+item2[] = {"Start",0,250,-350.000000,-450.000000,-250.000000,-400.000000,0.000000,"Start"};
+link0[] = {0,1};
+link1[] = {2,0};
+globals[] = {25.000000,1,0,0,0,640,480,1,132,6316128,1,-391.144836,67.249451,-217.531403,-656.711548,668,640,1};
+window[] = {0,-1,-1,-1,-1,935,175,1343,175,1,686};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "bounce";
+  class States
+  {
+    /*%FSM<STATE "Bounce_off_to__s">*/
+    class Bounce_off_to__s
+    {
+      name = "Bounce_off_to__s";
+      init = /*%FSM<STATEINIT""">*/"[_this, _from, _sentenceId, _topic] call FHQ_handleSpeech;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Start">*/
+    class Start
+    {
+      name = "Start";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "__">*/
+        class __
+        {
+          priority = 0.000000;
+          to="Bounce_off_to__s";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="Start";
+  finalStates[] =
+  {
+    "Bounce_off_to__s",
+  };
+};
+/*%FSM</COMPILE>*/

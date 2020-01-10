@@ -1,0 +1,29 @@
+ambient[]={1.000000,1.000000,1.000000,1.000000};
+diffuse[]={1.000000,1.000000,1.000000,1.000000};
+forcedDiffuse[]={0.000000,0.000000,0.000000,0.000000};
+emmisive[]={0.000000,0.000000,0.000000,1.000000};
+specular[]={1.000000,1.000000,1.000000,0.000000};
+specularPower=9.600000;
+renderFlags[]=
+{
+	"NoAlphaWrite"
+};
+nextPass="RH_de\gsklo-pass2.rvmat";
+PixelShaderID="Glass";
+VertexShaderID="Glass";
+class Stage1
+{
+	texture="#(argb,8,8,3)color(1,1,1,1,CO)";
+	uvSource="none";
+	Filter="Anizotropic";
+};
+class Stage2
+{
+	texture="RH_de\tex\envg.paa";
+	uvSource="none";
+	Filter="Anizotropic";
+};
+class StageTI
+{
+ texture = "ca\weapons_e\data\default_ti_ca.paa";
+};

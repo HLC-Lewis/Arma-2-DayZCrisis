@@ -1,0 +1,2 @@
+#include "dialogs\constants.hpp"
+#include "dialogs\infoText.hpp"

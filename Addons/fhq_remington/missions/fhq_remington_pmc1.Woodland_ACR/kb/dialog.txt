@@ -1,0 +1,44 @@
+// Player 1
+[p1_intro] There they go... Let's get our ride and get out of here.
+[p1_intro] Honestly, I've never seen that much shit since Kabul.. we --
+[p1_brief] Guardian here, go ahead.
+[p1_brief] *muttered* Great, just what we need.
+[p1_brief] Solid copy, waiting for the chopper. Out.
+[p1_brief] I totally knew it. They are going to fuck us again ... distance lottery... bullshit.
+[p1_brief] *grunts* Alright, let's wait for the chopper, then. Gear up at the car if you need to.
+[p1_pilotbrief] Hey, pal.
+[p1_pilotbrief] Geez, that was the most compact briefing ever.
+[p1_foundops] There's our colleagues... damn... both dead. No sign of any suitcase.
+[p1_foundclient] That's the client's body..  No suitcase... the FTS guys might have jacked it.
+[p1_foundsuitcase] Hey, there's the suitcase... wait, it's forced open... and empty... damn
+[p1_reportback] ComCo, this is Guardian, message, over.
+[p1_reportback] XXXXXXXXXXXXXXX We have found the bodies of the operators and the client. They are all dead. No sign of the suitcase. Over
+[p1_reportback] We have found the bodies of the operators and the client. They are all dead. We also found the suitcase, but it's forded open and contents is missing. Over.
+[p1_reportback] XXXXXXXXXXXXXXX Negative, some of the crew are still not accounted for. Over.
+[p1_reportback] XXXXXXXXXXXXXXX We have found the suitcase, but it's been opened and the content is missing. How do we proceed ? Over.
+
+
+// Player 2
+[p2_intro] Geez, the driver is drunk again.. *shouts* Hey, dumbass, leave the wall stand-- nevermind..
+[p2_brief] Calm down, man, we're getting a free flight over Bystricia, including a romantic sunset ...
+
+// COMCO
+[comco_brief] Guardian, this is Combat Control, message, over.
+[comco_brief] Guardian, we have a situation here, one of our SUVs gone missing, and you've won the distance lottery.
+[comco_brief] We're sending in a chopper to pick you up. The pilot will brief you. Over.
+[comco_reportback] We copy, go ahead Guardian.
+[comco_reportback] XXXXXXXXXXX Roger, Guardian. We'll inform the board. You still need to find the suitcase. Out.
+[comco_reportback] Roger, Guardian. We'll inform the board. That makes three dead and the suitcase lost. Return to your pickup point for extraction. Out.
+[comco_reportback] XXXXXXXXXXX Roger, Guardian. Any sign of the bodies ?  Over.
+[comco_reportback] XXXXXXXXXXX Roger, Guardian. Go ahed with the mission. Out.
+
+// Pilot
+[pilot_inbound] Guardian, this is Eagle 3-1, inbound for pickup, eta 2 mikes. Out.
+[pilot_brief] Hey guys. What's up ? 
+[pilot_brief] Ok, situation. The SUV was on the way to the capital. Client insisted on going on backroads... security...
+[pilot_brief] Car was likely hit, so you have to search for survivors. Two operatives, and the client. Had a suitcase, find that too.
+[pilot_brief] The board has cleared the legal mumbo jumbo with the military, which means gun use acceptable if fired upon blah blah, you know the drill. That's it.
+[pilot_brief] *snickers* Don't want to stress you too much after a long day.
+[pilot_detect] There's the car... ugh, doesn't look good... gonna circle.
+[pilot_setdown] I'll drop you off on the open field north of here.
+[pilot_goodluck] I'm off, good luck, guys. ComCo, Eagle 3-1, I am R-T-B. Out.

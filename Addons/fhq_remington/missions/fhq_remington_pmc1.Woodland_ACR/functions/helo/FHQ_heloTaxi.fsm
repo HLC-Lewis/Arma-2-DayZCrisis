@@ -1,0 +1,409 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, FHQ_heloTaxi.fsm">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Start",0,250,-400.000000,-725.000000,-300.000000,-675.000000,0.000000,"Start"};
+item1[] = {"Always",8,218,-400.000000,-650.000000,-300.000000,-600.000000,0.000000,"Always"};
+item2[] = {"Idle",2,250,-400.000000,-575.000000,-300.000000,-525.000000,0.000000,"Idle"};
+item3[] = {"Get_in__",4,218,-400.000000,-400.000000,-300.000000,-350.000000,0.000000,"Get in ?"};
+item4[] = {"Select__Destinat",2,250,-400.000000,-325.000000,-300.000000,-275.000000,0.000000,"Select " \n "Destination"};
+item5[] = {"Get_out__",4,218,-400.000000,-100.000000,-300.000000,-50.000000,2.000000,"Get out ?"};
+item6[] = {"Clear_course",2,250,-400.000000,-25.000000,-300.000000,25.000000,0.000000,"Clear course"};
+item7[] = {"WP_ready__",4,218,-400.000000,-250.000000,-300.000000,-200.000000,0.000000,"WP ready ?"};
+item8[] = {"Move",2,250,-400.000000,-175.000000,-300.000000,-125.000000,0.000000,"Move"};
+item9[] = {"Always",8,218,-725.000000,-25.000000,-625.000000,25.000000,0.000000,"Always"};
+item10[] = {"Return_to_Base",2,250,-725.000000,-100.000000,-625.000000,-50.000000,0.000000,"Return to" \n "Base"};
+item11[] = {"Always",8,218,-725.000000,-575.000000,-625.000000,-525.000000,0.000000,"Always"};
+item12[] = {"Get_out__",4,218,0.000000,-325.000000,100.000000,-275.000000,0.000000,"Get out ?"};
+item13[] = {"",7,210,45.999996,-4.000000,54.000004,4.000000,0.000000,""};
+item14[] = {"Helo_called__",4,218,-250.000000,-575.000000,-150.000000,-525.000000,0.000000,"Helo called ?"};
+item15[] = {"Select__Destinat_1",2,250,-100.000000,-575.000000,0.000000,-525.000000,0.000000,"Select " \n "Destination"};
+item16[] = {"cancelled__",4,218,75.000000,-575.000000,175.000000,-525.000000,5.000000,"cancelled ?"};
+item17[] = {"",7,210,121.000008,-4.000000,129.000000,4.000000,0.000000,""};
+item18[] = {"",7,210,-54.000000,-4.000000,-45.999996,4.000000,0.000000,""};
+item19[] = {"cancelled__",4,218,-100.000000,-175.000000,0.000000,-125.000000,5.000000,"cancelled ?"};
+item20[] = {"WP_ready__",4,218,-100.000000,-500.000000,0.000000,-450.000000,0.000000,"WP ready ?"};
+item21[] = {"Move_1",2,250,-100.000000,-400.000000,0.000000,-350.000000,0.000000,"Move"};
+item22[] = {"",7,210,33.500000,-379.000000,41.500000,-371.000000,0.000000,""};
+item23[] = {"",7,210,33.499996,-554.000000,41.500004,-546.000000,0.000000,""};
+item24[] = {"Helo_dead__",4,4314,-600.000000,-500.000000,-500.000000,-450.000000,10.000000,"Helo dead ?"};
+item25[] = {"Helo_shot_down",1,250,-600.000000,-400.000000,-500.000000,-350.000000,0.000000,"Helo shot down"};
+item26[] = {"",7,210,-329.000000,-479.000000,-321.000000,-471.000000,0.000000,""};
+link0[] = {0,1};
+link1[] = {1,2};
+link2[] = {2,3};
+link3[] = {2,14};
+link4[] = {2,24};
+link5[] = {2,26};
+link6[] = {3,4};
+link7[] = {4,7};
+link8[] = {4,12};
+link9[] = {4,24};
+link10[] = {5,6};
+link11[] = {6,9};
+link12[] = {7,8};
+link13[] = {8,5};
+link14[] = {8,19};
+link15[] = {8,24};
+link16[] = {9,10};
+link17[] = {10,11};
+link18[] = {10,24};
+link19[] = {11,2};
+link20[] = {12,13};
+link21[] = {13,18};
+link22[] = {14,15};
+link23[] = {15,20};
+link24[] = {15,23};
+link25[] = {15,24};
+link26[] = {16,17};
+link27[] = {17,13};
+link28[] = {18,6};
+link29[] = {19,18};
+link30[] = {20,21};
+link31[] = {21,3};
+link32[] = {21,22};
+link33[] = {21,24};
+link34[] = {22,23};
+link35[] = {23,16};
+link36[] = {24,25};
+link37[] = {26,20};
+globals[] = {25.000000,1,0,0,0,640,480,1,34,6316128,1,-997.249146,230.995483,94.033531,-833.001160,1299,911,1};
+window[] = {2,-1,-1,-1,-1,1106,150,1697,150,3,1317};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "FHQ_heloTaxi.fsm";
+  class States
+  {
+    /*%FSM<STATE "Start">*/
+    class Start
+    {
+      name = "Start";
+      init = /*%FSM<STATEINIT""">*/"// Parameters are [helo, homebase position, logic object]" \n
+       "_helo = _this select 0;" \n
+       "_homeBase = _this select 1;" \n
+       "_playerGroup = _this select 2;" \n
+       "_logic = _this select 3;" \n
+       "_pilot = driver _helo;" \n
+       "" \n
+       "//[] call  compile preprocessFile ""scripts\FHQ_functions.sqf"";"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Always">*/
+        class Always
+        {
+          priority = 0.000000;
+          to="Idle";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Idle">*/
+    class Idle
+    {
+      name = "Idle";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Helo_dead__">*/
+        class Helo_dead__
+        {
+          priority = 10.000000;
+          to="Helo_shot_down";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(!(alive _helo) && !(_pilot == (driver _helo)));"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Helo_called__">*/
+        class Helo_called__
+        {
+          priority = 0.000000;
+          to="Select__Destinat_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_logic getVariable ""FHQ_heloIsCalled"");"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "WP_ready__">*/
+        class WP_ready__
+        {
+          priority = 0.000000;
+          to="Move_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_logic getVariable ""FHQ_readyToMove"");"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Get_in__">*/
+        class Get_in__
+        {
+          priority = 0.000000;
+          to="Select__Destinat";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"// Check that everybody is in" \n
+           "({_x in _helo} count units _playerGroup == {alive _x} count units _playerGroup);"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Select__Destinat">*/
+    class Select__Destinat
+    {
+      name = "Select__Destinat";
+      init = /*%FSM<STATEINIT""">*/"[_logic] call FHQ_clearWaypoints;" \n
+       "[_helo] call FHQ_clearHeloOrders;" \n
+       "" \n
+       "[_logic, ""FHQ_selectDropoffDestCb""] call FHQ_invokeCalback;" \n
+       "[ leader _playerGroup, {onMapSingleClick ""_null = [_pos, _units, _shift, _alt, """"unload""""] call FHQ_plotRoute;"";}] call FHQ_executeLocal;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Helo_dead__">*/
+        class Helo_dead__
+        {
+          priority = 10.000000;
+          to="Helo_shot_down";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(!(alive _helo) && !(_pilot == (driver _helo)));"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Get_out__">*/
+        class Get_out__
+        {
+          priority = 0.000000;
+          to="Clear_course";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"// Check that everybody is out" \n
+           "({_x in _helo} count units _playerGroup == 0);"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "WP_ready__">*/
+        class WP_ready__
+        {
+          priority = 0.000000;
+          to="Move";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_logic getVariable ""FHQ_readyToMove"");"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Clear_course">*/
+    class Clear_course
+    {
+      name = "Clear_course";
+      init = /*%FSM<STATEINIT""">*/"[_logic] call FHQ_clearWaypoints;" \n
+       "[_helo] call FHQ_clearHeloOrders;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Always">*/
+        class Always
+        {
+          priority = 0.000000;
+          to="Return_to_Base";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Move">*/
+    class Move
+    {
+      name = "Move";
+      init = /*%FSM<STATEINIT""">*/"[_logic, ""FHQ_enRouteForDropoffCb""] call FHQ_invokeCalback;" \n
+       "[_logic, _helo] call FHQ_moveHelo;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Helo_dead__">*/
+        class Helo_dead__
+        {
+          priority = 10.000000;
+          to="Helo_shot_down";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(!(alive _helo) && !(_pilot == (driver _helo)));"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "cancelled__">*/
+        class cancelled__
+        {
+          priority = 5.000000;
+          to="Clear_course";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_logic getVariable ""FHQ_heloIsCancelled"");"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Get_out__">*/
+        class Get_out__
+        {
+          priority = 2.000000;
+          to="Clear_course";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"// Check that everybody is out" \n
+           "({_x in _helo} count units _playerGroup == 0);"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Return_to_Base">*/
+    class Return_to_Base
+    {
+      name = "Return_to_Base";
+      init = /*%FSM<STATEINIT""">*/"[_logic, ""FHQ_returnToBaseCb""] call FHQ_invokeCalback;" \n
+       "[_logic, _helo] call FHQ_returnToBase" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Helo_dead__">*/
+        class Helo_dead__
+        {
+          priority = 10.000000;
+          to="Helo_shot_down";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(!(alive _helo) && !(_pilot == (driver _helo)));"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Always">*/
+        class Always
+        {
+          priority = 0.000000;
+          to="Idle";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Select__Destinat_1">*/
+    class Select__Destinat_1
+    {
+      name = "Select__Destinat_1";
+      init = /*%FSM<STATEINIT""">*/"[_logic] call FHQ_clearWaypoints;" \n
+       "[_helo] call FHQ_clearHeloOrders;" \n
+       "" \n
+       "[_logic, ""FHQ_selectPickupDestCb""] call FHQ_invokeCalback;" \n
+       "[leader _playerGroup, {onMapSingleClick ""_null = [_pos, _units, _shift, _alt, """"load""""] call FHQ_plotRoute;"";}] call FHQ_executeLocal;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Helo_dead__">*/
+        class Helo_dead__
+        {
+          priority = 10.000000;
+          to="Helo_shot_down";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(!(alive _helo) && !(_pilot == (driver _helo)));"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "cancelled__">*/
+        class cancelled__
+        {
+          priority = 5.000000;
+          to="Clear_course";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_logic getVariable ""FHQ_heloIsCancelled"");"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "WP_ready__">*/
+        class WP_ready__
+        {
+          priority = 0.000000;
+          to="Move_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_logic getVariable ""FHQ_readyToMove"");"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Move_1">*/
+    class Move_1
+    {
+      name = "Move_1";
+      init = /*%FSM<STATEINIT""">*/"[_logic, ""FHQ_enRouteForPickupCb""] call FHQ_invokeCalback;" \n
+       "[_logic, _helo] call FHQ_moveHelo;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Helo_dead__">*/
+        class Helo_dead__
+        {
+          priority = 10.000000;
+          to="Helo_shot_down";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(!(alive _helo) && !(_pilot == (driver _helo)));"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "cancelled__">*/
+        class cancelled__
+        {
+          priority = 5.000000;
+          to="Clear_course";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_logic getVariable ""FHQ_heloIsCancelled"");"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Get_in__">*/
+        class Get_in__
+        {
+          priority = 0.000000;
+          to="Select__Destinat";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"// Check that everybody is in" \n
+           "({_x in _helo} count units _playerGroup == {alive _x} count units _playerGroup);"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Helo_shot_down">*/
+    class Helo_shot_down
+    {
+      name = "Helo_shot_down";
+      init = /*%FSM<STATEINIT""">*/"_helo setVariable [""FHQ_showMarker"", false, true];" \n
+       "[_logic] call FHQ_clearWaypoints;" \n
+       "[_logic, ""FHQ_heloDestroyedCb""] call FHQ_invokeCalback;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="Start";
+  finalStates[] =
+  {
+    "Helo_shot_down",
+  };
+};
+/*%FSM</COMPILE>*/

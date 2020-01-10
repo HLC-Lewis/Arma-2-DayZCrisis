@@ -1,0 +1,468 @@
+
+	/* iron sight */
+	class FHQ_ACR_XXX_IRN : FHQ_ACR_WDL_IRN
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_iron.paa";
+		displayName = "ACR (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_iron.p3d";
+
+	};
+	
+	class FHQ_ACR_XXX_IRN_F : FHQ_ACR_WDL_IRN_F
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_iron.paa";
+		displayName = "ACR (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_iron.p3d";
+
+	};
+		
+	class FHQ_ACR_XXX_IRN_SD : FHQ_ACR_WDL_IRN_SD
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_iron_sd.paa";
+		displayName = "ACR SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_iron_sd.p3d";
+
+	};
+	
+	class FHQ_ACR_XXX_IRN_SD_F : FHQ_ACR_WDL_IRN_SD_F
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_iron_sd.paa";
+		displayName = "ACR SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_iron_sd.p3d";
+
+	};
+		
+	class FHQ_ACR_XXX_IRN_GL : FHQ_ACR_WDL_IRN_GL
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_iron_gl.paa";
+		displayName = "ACR M320 (TYPE)";
+		
+		model = "\fhq_remington\acr\acr_xxx_iron_gl.p3d";
+
+	};
+	
+	class FHQ_ACR_XXX_IRN_GL_F : FHQ_ACR_WDL_IRN_GL_F
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_iron_gl.paa";
+		
+		displayName = "ACR M320 (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_iron_gl.p3d";
+
+	};	
+	
+	class FHQ_ACR_XXX_IRN_GL_SD : FHQ_ACR_WDL_IRN_GL_SD
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_iron_gl_sd.paa";
+		displayName = "ACR M320 SD (TYPE)";
+		
+		model = "\fhq_remington\acr\acr_xxx_iron_gl_sd.p3d";
+
+	};
+	
+	class FHQ_ACR_XXX_IRN_GL_SD_F : FHQ_ACR_WDL_IRN_GL_SD_F
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_iron_gl_sd.paa";
+		
+		displayName = "ACR M320 SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_iron_gl_sd.p3d";
+
+	};	
+	
+	/* Aimpoint */
+	class FHQ_ACR_XXX_CCO : FHQ_ACR_WDL_CCO
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_aim.paa";
+		displayName = "ACR CCO (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_aim.p3d";
+	};
+	
+	class FHQ_ACR_XXX_CCO_F : FHQ_ACR_WDL_CCO_F 
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_aim.paa";
+		displayName = "ACR CCO (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_aim.p3d";
+	};
+	
+	class FHQ_ACR_XXX_CCO_SD : FHQ_ACR_WDL_CCO_SD
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_aim_sd.paa";
+		displayName = "ACR CCO SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_aim_sd.p3d";
+	};
+	
+	class FHQ_ACR_XXX_CCO_SD_F : FHQ_ACR_WDL_CCO_SD_F 
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_aim_sd.paa";
+		displayName = "ACR CCO SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_aim_sd.p3d";
+	};
+	
+	class FHQ_ACR_XXX_CCO_GL : FHQ_ACR_WDL_CCO_GL
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_aim_gl.paa";
+		displayName = "ACR CCO M320 (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_aim_gl.p3d";
+	};
+	
+	class FHQ_ACR_XXX_CCO_GL_F : FHQ_ACR_WDL_CCO_GL_F 
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_aim_gl.paa";
+		displayName = "ACR CCO M320 (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_aim_gl.p3d";
+	};
+	
+	class FHQ_ACR_XXX_CCO_GL_SD : FHQ_ACR_WDL_CCO_GL_SD
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_aim_gl_sd.paa";
+		displayName = "ACR CCO M320 SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_aim_gl_sd.p3d";
+	};
+	
+	class FHQ_ACR_XXX_CCO_GL_SD_F : FHQ_ACR_WDL_CCO_GL_SD_F 
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_aim_gl_sd.paa";
+		displayName = "ACR CCO M320 SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_aim_gl_sd.p3d";
+	};
+	
+	/* RCO/ACOG */
+	class FHQ_ACR_XXX_RCO : FHQ_ACR_WDL_RCO
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_rco.paa";
+		displayName = "ACR RCO (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_rco.p3d";
+	};
+	
+	class FHQ_ACR_XXX_RCO_F: FHQ_ACR_WDL_RCO_F
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_rco.paa";
+		displayName = "ACR RCO (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_rco.p3d";
+	};
+	
+	class FHQ_ACR_XXX_RCO_SD : FHQ_ACR_WDL_RCO_SD
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_rco_sd.paa";
+		displayName = "ACR RCO SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_rco_sd.p3d";
+	};
+	
+	class FHQ_ACR_XXX_RCO_SD_F: FHQ_ACR_WDL_RCO_SD_F
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_rco_sd.paa";
+		displayName = "ACR RCO SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_rco_sd.p3d";
+	};
+	
+	class FHQ_ACR_XXX_RCO_GL : FHQ_ACR_WDL_RCO_GL
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_rco_gl.paa";
+		displayName = "ACR RCO M320 (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_rco_gl.p3d";
+	};
+	
+	class FHQ_ACR_XXX_RCO_GL_F: FHQ_ACR_WDL_RCO_GL_F
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_rco_gl.paa";
+		displayName = "ACR RCO M320 (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_rco_gl.p3d";
+	};
+	
+	class FHQ_ACR_XXX_RCO_GL_SD : FHQ_ACR_WDL_RCO_GL_SD
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_rco_gl_sd.paa";
+		displayName = "ACR RCO M320 SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_rco_gl_sd.p3d";
+	};
+	
+	class FHQ_ACR_XXX_RCO_GL_SD_F: FHQ_ACR_WDL_RCO_GL_SD_F
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_rco_gl_sd.paa";
+		displayName = "ACR RCO M320 SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_rco_gl_sd.p3d";
+	};
+	
+	/* EoTech / Holo */
+	class FHQ_ACR_XXX_HWS : FHQ_ACR_WDL_HWS
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_hws.paa";
+		displayName = "ACR HWS (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_hws.p3d";
+	};
+	
+	class FHQ_ACR_XXX_HWS_F : FHQ_ACR_WDL_HWS_F 
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_hws.paa";
+		displayName = "ACR HWS (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_hws.p3d";
+	};
+
+	class FHQ_ACR_XXX_HWS_GL : FHQ_ACR_WDL_HWS_GL
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_hws_gl.paa";
+		displayName = "ACR HWS M320 (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_hws_gl.p3d";
+	};
+	
+	class FHQ_ACR_XXX_HWS_GL_F : FHQ_ACR_WDL_HWS_GL_F 
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_hws_gl.paa";
+		displayName = "ACR HWS M320 (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_hws_gl.p3d";
+	};
+	
+	class FHQ_ACR_XXX_HWS_SD : FHQ_ACR_WDL_HWS_SD
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_hws_sd.paa";
+		displayName = "ACR HWS SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_hws_sd.p3d";
+	};
+	
+	class FHQ_ACR_XXX_HWS_SD_F : FHQ_ACR_WDL_HWS_SD_F 
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_hws_sd.paa";
+		displayName = "ACR HWS SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_hws_sd.p3d";
+	};
+	
+	class FHQ_ACR_XXX_HWS_GL_SD : FHQ_ACR_WDL_HWS_GL_SD
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_hws_gl_sd.paa";
+		displayName = "ACR HWS M320 SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_hws_gl_sd.p3d";
+	};
+	
+	class FHQ_ACR_XXX_HWS_GL_SD_F : FHQ_ACR_WDL_HWS_GL_SD_F 
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_hws_gl_sd.paa";
+		displayName = "ACR HWS M320 SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_hws_gl_sd.p3d";
+	};
+	
+	/* G33 Eotech HWS Magnifier */
+	class FHQ_ACR_XXX_G33 : FHQ_ACR_WDL_G33
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_g33.paa";
+		displayName = "ACR G33 (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_g33.p3d";
+	};
+	
+	class FHQ_ACR_XXX_G33_F : FHQ_ACR_WDL_G33_F
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_g33.paa";
+		displayName = "ACR G33 (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_g33.p3d";
+	};
+	
+	class FHQ_ACR_XXX_G33_SD : FHQ_ACR_WDL_G33_SD
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_g33_sd.paa";
+		displayName = "ACR G33 SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_g33_sd.p3d";
+	};
+	
+	class FHQ_ACR_XXX_G33_SD_F : FHQ_ACR_WDL_G33_SD_F
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_g33_sd.paa";
+		displayName = "ACR G33 SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_g33_sd.p3d";
+	};
+	
+	class FHQ_ACR_XXX_G33_GL : FHQ_ACR_WDL_G33_GL
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_g33_gl.paa";
+		displayName = "ACR G33 M320 (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_g33_gl.p3d";
+	};
+	
+	class FHQ_ACR_XXX_G33_GL_F : FHQ_ACR_WDL_G33_GL_F
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_g33_gl.paa";
+		displayName = "ACR G33 M320 (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_g33_gl.p3d";
+	};
+	
+	class FHQ_ACR_XXX_G33_GL_SD : FHQ_ACR_WDL_G33_GL_SD
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_g33_gl_sd.paa";
+		displayName = "ACR G33 M320 SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_g33_gl_sd.p3d";
+	};
+	
+	class FHQ_ACR_XXX_G33_GL_SD_F : FHQ_ACR_WDL_G33_GL_SD_F
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_g33_gl_sd.paa";
+		displayName = "ACR G33 M320 SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_g33_gl_sd.p3d";
+	};
+	
+	class FHQ_ACR_XXX_HAMR : FHQ_ACR_WDL_HAMR
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_hamr.paa";
+		displayName = "ACR HAMR (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_hamr.p3d";
+	};
+	
+	class FHQ_ACR_XXX_HAMR_F : FHQ_ACR_WDL_HAMR_F
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_hamr.paa";
+		displayName = "ACR HAMR (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_hamr.p3d";
+	};
+	
+	class FHQ_ACR_XXX_HAMR_SD : FHQ_ACR_WDL_HAMR_SD
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_hamr_sd.paa";
+		displayName = "ACR HAMR SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_hamr_sd.p3d";
+	};
+	
+	class FHQ_ACR_XXX_HAMR_SD_F : FHQ_ACR_WDL_HAMR_SD_F
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_hamr_sd.paa";
+		displayName = "ACR HAMR SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_hamr_sd.p3d";
+	};
+	
+	class FHQ_ACR_XXX_HAMR_GL : FHQ_ACR_WDL_HAMR_GL
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_hamr_gl.paa";
+		displayName = "ACR HAMR M320 (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_hamr_gl.p3d";
+	};
+	
+	class FHQ_ACR_XXX_HAMR_GL_F : FHQ_ACR_WDL_HAMR_GL_F
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_hamr_gl.paa";
+		displayName = "ACR HAMR M320 (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_hamr_gl.p3d";
+	};
+	
+	class FHQ_ACR_XXX_HAMR_GL_SD : FHQ_ACR_WDL_HAMR_GL_SD
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_hamr_gl_sd.paa";
+		displayName = "ACR HAMR M320 SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_hamr_gl_sd.p3d";
+		modelOptics = "\fhq_remington\scopes\hamr_optics.p3d";
+	};
+	
+	class FHQ_ACR_XXX_HAMR_GL_SD_F : FHQ_ACR_WDL_HAMR_GL_SD_F
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_hamr_gl_sd.paa";
+		displayName = "ACR HAMR M320 SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_hamr_gl_sd.p3d";
+	};
+
+	class FHQ_ACR_XXX_TWS : FHQ_ACR_WDL_TWS
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_tws.paa";
+		displayName = "ACR TWS (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_tws.p3d";
+	};
+	
+	class FHQ_ACR_XXX_TWS_F : FHQ_ACR_WDL_TWS_F 
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_tws.paa";
+		displayName = "ACR TWS (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_tws.p3d";
+	};
+	
+	
+	class FHQ_ACR_XXX_TWS_SD : FHQ_ACR_WDL_TWS_SD
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_tws_sd.paa";
+		displayName = "ACR TWS SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_tws_sd.p3d";
+	};
+	
+	class FHQ_ACR_XXX_TWS_SD_F : FHQ_ACR_WDL_TWS_SD_F 
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_tws_sd.paa";
+		displayName = "ACR TWS SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_tws_sd.p3d";
+	};
+	
+	class FHQ_ACR_XXX_TWS_GL : FHQ_ACR_WDL_TWS_GL
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_tws_gl.paa";
+		displayName = "ACR TWS M320 (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_tws_gl.p3d";
+	};
+	
+	class FHQ_ACR_XXX_TWS_GL_F : FHQ_ACR_WDL_TWS_GL_F 
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_tws_gl.paa";
+		displayName = "ACR TWS M320 (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_tws_gl.p3d";
+	};
+	
+	
+	class FHQ_ACR_XXX_TWS_GL_SD : FHQ_ACR_WDL_TWS_GL_SD
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_tws_gl_sd.paa";
+		displayName = "ACR TWS M320 SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_tws_gl_sd.p3d";
+	};
+	
+	class FHQ_ACR_XXX_TWS_GL_SD_F : FHQ_ACR_WDL_TWS_GL_SD_F 
+	{
+		scope = public;
+		picture = "\fhq_remington\acr\ui\i_acr_xxx_tws_gl_sd.paa";
+		displayName = "ACR TWS SD (TYPE)";
+		model = "\fhq_remington\acr\acr_xxx_tws_gl_sd.p3d";
+	};

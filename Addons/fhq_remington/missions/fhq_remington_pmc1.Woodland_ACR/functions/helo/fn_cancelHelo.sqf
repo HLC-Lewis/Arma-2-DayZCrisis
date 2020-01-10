@@ -1,0 +1,1 @@
+FHQ_heloLogic setVariable ["FHQ_heloIsCancelled", true, true];
