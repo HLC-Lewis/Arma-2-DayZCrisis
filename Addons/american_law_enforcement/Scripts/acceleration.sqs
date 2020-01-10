@@ -1,0 +1,66 @@
+; ****************************************************************
+; Acceleration
+; Created by: Dead3yez
+; ****************************************************************
+
+
+_veh = _this select 0
+_accel = _this select 1
+_topspeed = _this select 2
+_acttopspeed = _this select 3
+
+;hint format["%1, %2", _accel, _topspeed]
+#start
+_velx = velocity _veh select 0
+_vely = velocity _veh select 1
+_velz = velocity _veh select 2
+_vehdir = direction _veh
+_s1 = speed _veh
+_h = getposatl _veh select 2
+~0.005
+if ((_s1 > _acttopspeed) and (_s1 < 180) and (_s1 < _topspeed) and (_h < 0.25)) then {_veh setVelocity [_velx+(sin _vehdir*0.5), _vely+(cos _vehdir*0.5), _velz]}
+if ((_s1 > 180) and (_s1 < _topspeed) and (_h < 0.25)) then {_veh setVelocity [_velx+(sin _vehdir*10), _vely+(cos _vehdir*10), _velz]}
+if ((_h < 0.25) and (_s1 < _topspeed) and (_s1 > 5) and (_s1 < 100)) then {goto "accelerate"}
+if ((_h < 0.25) and (_s1 < _topspeed) and (_s1 > 100)) then {goto "accelerate2"}
+~0.02
+goto "start"
+
+
+#accelerate
+~0.005
+_s2 = speed _veh
+if (_s2 < _s1) then {goto "start"}
+_denomacc = _s2 - _s1
+if (_denomacc < 0.001) then {goto "start"}
+_velx = velocity _veh select 0
+_vely = velocity _veh select 1
+_velz = velocity _veh select 2
+_vehdir = direction _veh
+
+_acca =  _topspeed / _s1
+_accdo = _denomacc * _accel
+
+_veh setVelocity [_velx+(sin _vehdir*_accdo), _vely+(cos _vehdir*_accdo), _velz]
+
+;hint "accelerating"
+goto "start"
+
+#accelerate2
+_vehdir = direction _veh
+~0.005
+_s2 = speed _veh
+;if (_s2 < _s1) then {goto "start"}
+_denomacc = _s2 - _s1
+if (_denomacc < 0.001) then {goto "start"}
+_velx = velocity _veh select 0
+_vely = velocity _veh select 1
+_velz = velocity _veh select 2
+
+_acca1 =  _topspeed / _accel
+_acca =  1 / _acca1
+_accdo = _acca * (_topspeed / _s1)
+
+_veh setVelocity [_velx+(sin _vehdir*_accdo), _vely+(cos _vehdir*_accdo), _velz]
+
+;hint "accelerating"
+goto "start"

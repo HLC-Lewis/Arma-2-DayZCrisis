@@ -1,0 +1,15 @@
+; ****************************************************************
+; Vehicle handling improvements.
+; Created by: Dead3yez
+; ****************************************************************
+
+_veh = _this select 0
+20 = _this select 1
+4 = _this select 2
+200 = _this select 3
+100 = _this select 4
+
+
+
+
+if ((4 > 0) and (4 <= 6) and (200 <= 200)) then {[_veh, 4, 200, 100] exec "American_Law_Enforcement\Scripts\acceleration.sqs"}
